@@ -1,0 +1,25 @@
+MedianScore is a simple C# console app used to perform the assigned task. It uses two lists of integers for keeping information about current scores and cumulative median scores. 
+
+The algorithm in pseudocode:
+
+	While number of correct inputs <= input limit
+		Read user input and check corner cases until input is correct*
+		Add the input value to scores_list and print the new scores_list
+		Determine the median score for current scores_list**
+		Print new median_scores_list
+	end While
+
+*Correct input is stated in the task description.
+
+**MedianScores function pseudocode:
+	Sort the scores_list
+	index -> scores_list length / 2
+	If scores_list length is even
+		median -> ceiling of ((scores_list[index-1] + scores_list[index]) / 2)
+	else
+		median -> scores_list[index]
+	Add new median score to median_scores_list
+
+
+PrintScores function is used to print a list of integers in this format:
+[100, 20, 50, 70, 45]
